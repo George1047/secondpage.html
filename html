@@ -3,6 +3,8 @@
 <title>Experiments with CSS</title>
 <style type='text/css'> /* These styles will remove all padding and margins on h1, h2 and p elements, and make the headings red. */
 
+   h1, h2 {margin: 10pt 0 2pt 0;}
+   
    h1 {font-size: 1.33em;}, h2 {font-size: 1.17em;}, p {
       padding: 0;
       margin: 0;
@@ -12,11 +14,28 @@
    h1, h2 {
       color: red;
    }
-
+   
+   p:first-of-type {
+      font: 0.17em/1.33 Verdana, sans-serif;
+   }
+   p.first {text-indent: 0em;}
+   p + p {text-indent: 5em;}
+   p {text-indent: 5em;}
 </style>
 </head>
 <body>
    <div id="wrapper">
+      <div id="banner"></div>
+      div#banner{
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: auto;
+  }
+   </div>
    <h1>Big page heading</h1>
    <p class="introduction">This is the introductory paragraph.</p>
    <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
@@ -34,7 +53,9 @@
     </div> <!-- end of movieQuote div -->
    </div> <!-- end of div#films -->
    </div><!-- end of div#wrapper -->
+p {margin: 0 0 0.5em 0;}
 </body>
+
 
 </html>
 
